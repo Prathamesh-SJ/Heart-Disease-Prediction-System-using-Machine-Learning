@@ -1,81 +1,136 @@
-❤️ Heart Disease Prediction System
+# ❤️ Heart Disease Prediction System using Machine Learning
 
-A Machine Learning-powered web application that predicts the likelihood of heart disease based on patient health parameters. The project uses Logistic Regression for classification and Streamlit for an interactive user interface.
+<div align="center">
 
-📌 Features
-Predicts the presence of heart disease using medical attributes.
-User-friendly Streamlit interface.
-Trained using Logistic Regression.
-Model persistence using Pickle.
-Real-time predictions.
-Handles user input safely.
-Beginner-friendly and easy to extend.
-🛠️ Tech Stack
-Technology	Purpose
-Python	Programming Language
-Pandas	Data Processing
-NumPy	Numerical Computations
-Scikit-Learn	Machine Learning
-Streamlit	Web Application
-Pickle	Model Serialization
-📂 Dataset Information
+### Predicting Cardiovascular Risk using Clinical Patient Data
 
-The dataset contains 1025 patient records with 13 medical features.
+![Python](https://img.shields.io/badge/Python-3.8+-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Scikit-learn](https://img.shields.io/badge/Scikit--Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
+![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)
 
-Features Used
-Feature	Description
-age	Age of patient
-sex	Gender
-cp	Chest pain type
-trestbps	Resting blood pressure
-chol	Cholesterol level
-fbs	Fasting blood sugar
-restecg	Resting ECG results
-thalach	Maximum heart rate achieved
-exang	Exercise-induced angina
-oldpeak	ST depression induced by exercise
-slope	Slope of peak exercise ST segment
-ca	Number of major vessels
-thal	Thalassemia status
-Target Variable
-0 → Heart Disease Present
-1 → No Heart Disease
-📊 Data Analysis
-Dataset Shape
-(1025,14)
-Missing Values
-0 Missing Values
-Duplicate Records
-723 Duplicate Rows Found
-🤖 Machine Learning Model
-Algorithm Used
-Logistic Regression
-Data Split
-80% Training
-20% Testing
-Model Performance
-Metric	Score
-Training Accuracy	85.85%
-Testing Accuracy	81.46%
-💾 Model Saving
+</div>
 
-The trained model is stored using Pickle.
+---
 
-with open("heart.pkl","wb") as file:
-    pickle.dump(model,file)
-🖥️ Streamlit Application
+## 📌 Overview
 
-The application allows users to enter patient details such as:
+The **Heart Disease Prediction System** is an end-to-end Machine Learning application designed to predict the likelihood of heart disease using patient clinical parameters.
 
-Age
-Gender
-Chest Pain Type
-Cholesterol
-Blood Pressure
-ECG Results
-Heart Rate
-Exercise Induced Angina
-Number of Major Vessels
-Thalassemia Status
+Built using **Logistic Regression** and deployed with **Streamlit**, the project demonstrates a complete ML workflow including data exploration, preprocessing, model training, evaluation, serialization, and real-time inference through an interactive web interface.
 
-After clicking Predict, the model determines whether heart disease is likely to be present.
+This project serves as a practical implementation of predictive analytics in healthcare and showcases how machine learning can support early risk assessment.
+
+---
+
+## ✨ Key Highlights
+
+- 📊 **1025 Patient Records Analysed**
+- 🧠 **Logistic Regression Classification Model**
+- ⚡ **Interactive Streamlit Interface**
+- 📦 **Model Serialization using Pickle**
+- 🎯 **81.46% Testing Accuracy**
+- 🩺 **13 Clinical Features Used for Prediction**
+- 🔍 **Real-time Disease Risk Assessment**
+
+---
+
+## 📊 Dataset Summary
+
+| Property | Details |
+|---------|---------|
+| Total Samples | 1,025 |
+| Features | 13 |
+| Target Variable | Binary Classification |
+| Missing Values | 0 |
+| Duplicate Records | 723 |
+| Positive Cases | 526 |
+| Negative Cases | 499 |
+
+### Target Encoding
+
+| Value | Interpretation |
+|-------|---------------|
+| **0** | Heart Disease Present |
+| **1** | No Heart Disease |
+
+---
+
+## 🩺 Clinical Parameters Considered
+
+| Feature | Description |
+|---------|-------------|
+| Age | Patient Age |
+| Sex | Gender |
+| CP | Chest Pain Type |
+| Trestbps | Resting Blood Pressure |
+| Chol | Cholesterol Level |
+| FBS | Fasting Blood Sugar |
+| RestECG | ECG Results |
+| Thalach | Maximum Heart Rate Achieved |
+| Exang | Exercise Induced Angina |
+| Oldpeak | ST Depression |
+| Slope | ST Segment Slope |
+| CA | Major Vessels Count |
+| Thal | Thalassemia Status |
+
+---
+
+## 🤖 Model Performance
+
+| Metric | Score |
+|--------|-------|
+| Training Accuracy | **85.85%** |
+| Testing Accuracy | **81.46%** |
+
+The model demonstrates good generalization capability with a relatively small gap between training and testing performance, indicating limited overfitting.
+
+---
+
+## 🌐 Streamlit Application
+
+The web application enables users to enter patient information through an intuitive interface and instantly obtain predictions regarding heart disease risk.
+
+### Prediction Output
+
+✅ **No Heart Disease Detected**
+
+⚠️ **Heart Disease Detected**
+
+---
+
+## 🧠 Machine Learning Workflow
+
+```mermaid
+flowchart TD
+
+A[Load Dataset] --> B[EDA]
+
+B --> C[Data Cleaning]
+
+C --> D[Train Test Split]
+
+D --> E[Logistic Regression]
+
+E --> F[Model Evaluation]
+
+F --> G[Save Model]
+
+G --> H[Streamlit Deployment]
+
+H --> I[User Input]
+
+I --> J[Prediction Result]
+```
+
+---
+
+<div align="center">
+
+### ❤️ Applying Machine Learning for Smarter Healthcare Predictions
+
+⭐ If you found this project interesting, consider giving it a star.
+
+</div>
